@@ -3,8 +3,9 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #121212;
-    color: white;
+    background-color: white;
+    color: black;
+    transition: background 0.3s, color 0.3s;
 }
 
 header {
@@ -38,6 +39,7 @@ footer {
     background: #222;
     padding: 10px;
     font-size: 14px;
+    color: white;
 }
 
 .dark-mode {
