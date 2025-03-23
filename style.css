@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #121212;
+    color: white;
+}
+
+header {
+    background: #ffcc00;
+    color: black;
+    padding: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 50px;
+    border-bottom: 1px solid #333;
+}
+
+footer {
+    background: #222;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: white;
+}
