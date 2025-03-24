@@ -8,7 +8,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyC3SOmLJPFxHCGgUqWM62otduW9Ag25eJw",
   authDomain: "technowolvesbk.firebaseapp.com",
   projectId: "technowolvesbk",
-  storageBucket: "technowolvesbk.appspot.com",  // ❗ Burada yanlış yazılmıştı, düzelttim
+  storageBucket: "technowolvesbk.firebasestorage.app",
   messagingSenderId: "431745091745",
   appId: "1:431745091745:web:f213a36cc15f6a9d3908e0",
   measurementId: "G-SZCFGDEEJM"
