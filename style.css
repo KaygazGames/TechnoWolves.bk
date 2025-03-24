@@ -26,3 +26,16 @@ footer {
     padding: 10px;
     border-bottom: 1px solid #333;
 }
+
+#theme-toggle {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#theme-toggle:hover {
+    background: #555;
+}
