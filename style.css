@@ -3,6 +3,7 @@ body {
     background-color: white;
     color: black;
     text-align: center;
+    transition: background 0.3s, color 0.3s;
 }
 
 .dark-mode {
@@ -21,7 +22,7 @@ footer {
     color: white;
 }
 
-.news-item, .admin-news-item {
+.news-item {
     padding: 10px;
     border-bottom: 1px solid #333;
 }
