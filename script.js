@@ -39,7 +39,13 @@ async function getNews() {
 // Karanlık Mod
 document.getElementById("theme-toggle").addEventListener("click", function() {
     document.body.classList.toggle("dark-mode");
+    localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
 });
+
+// Sayfa yüklendiğinde önceki mod ayarını uygula
+if (localStorage.getItem("darkMode") === "true") {
+    document.body.classList.add("dark-mode");
+}
 
 // Sayfa yüklenince haberleri çek
 getNews();
