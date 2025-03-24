@@ -9,14 +9,21 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 const storage = getStorage(app);
 
+const adminEmail = "bilmem@bilmemne.bilmemne.tere"; // **Sadece bu hesap admin olacak!**
+
 function login() {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
     signInWithEmailAndPassword(auth, email, password)
-        .then(() => {
-            alert("Giriş Başarılı!");
-            checkAuth();
+        .then((userCredential) => {
+            if (userCredential.user.email === adminEmail) {
+                alert("Giriş Başarılı!");
+                checkAuth();
+            } else {
+                alert("Yetkisiz Giriş! Admin değilsiniz.");
+                logout();
+            }
         })
         .catch((error) => alert("Giriş Hatası: " + error.message));
 }
@@ -73,10 +80,13 @@ async function deleteNews(id) {
 
 function checkAuth() {
     onAuthStateChanged(auth, (user) => {
-        if (user) {
+        if (user && user.email === adminEmail) {
             document.getElementById("login-section").style.display = "none";
             document.getElementById("admin-section").style.display = "block";
             loadAdminNews();
+        } else {
+            document.getElementById("login-section").style.display = "block";
+            document.getElementById("admin-section").style.display = "none";
         }
     });
 }
