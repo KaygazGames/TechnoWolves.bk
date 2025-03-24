@@ -3,21 +3,25 @@ import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from
 import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-storage.js";
 
+// 📌 Firebase Konfigürasyonu
 const firebaseConfig = {
   apiKey: "AIzaSyC3SOmLJPFxHCGgUqWM62otduW9Ag25eJw",
   authDomain: "technowolvesbk.firebaseapp.com",
   projectId: "technowolvesbk",
-  storageBucket: "technowolvesbk.firebasestorage.app",
+  storageBucket: "technowolvesbk.appspot.com",  // ❗ Burada yanlış yazılmıştı, düzelttim
   messagingSenderId: "431745091745",
   appId: "1:431745091745:web:f213a36cc15f6a9d3908e0",
   measurementId: "G-SZCFGDEEJM"
 };
+
+// Firebase Başlatma
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 const storage = getStorage(app);
 
-const adminEmail = "technowolves@outlook.com"; // **Sadece bu hesap admin olacak!**
+// 📌 Sadece şu e-posta admin olabilir:
+const adminEmail = "bilmem@bilmemne.bilmemne.tere";
 
 function login() {
     const email = document.getElementById("email").value;
