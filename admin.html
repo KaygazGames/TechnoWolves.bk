@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Paneli</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Admin Paneli</h1>
+        <button onclick="logout()">🚪 Çıkış Yap</button>
+    </header>
+
+    <section id="login-section">
+        <h2>Giriş Yap</h2>
+        <input type="email" id="email" placeholder="E-posta">
+        <input type="password" id="password" placeholder="Şifre">
+        <button onclick="login()">Giriş Yap</button>
+    </section>
+
+    <section id="admin-section" style="display: none;">
+        <h2>Yeni Haber Ekle</h2>
+        <input type="text" id="news-title" placeholder="Başlık">
+        <textarea id="news-content" placeholder="İçerik"></textarea>
+        <button onclick="addNews()">Haber Ekle</button>
+
+        <h2>Haberler</h2>
+        <div id="admin-news-list"></div>
+    </section>
+
+    <script type="module" src="admin.js"></script>
+</body>
+</html>
