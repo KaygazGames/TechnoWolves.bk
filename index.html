@@ -4,37 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechnoWolves Fibonacci</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: white;
-            text-align: center;
-        }
-        h1 {
-            color: #FFD700;
-        }
-        #news-container {
-            width: 80%;
-            margin: auto;
-            text-align: left;
-        }
-        .news-item {
-            background: #1e1e1e;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>TechnoWolves Fibonacci Haberler</h1>
-    <div id="news-container">
-        <p>Haberler yükleniyor...</p>
-    </div>
 
-    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js"></script>
-    <script src="script.js"></script>
+    <header>
+        <h1>TechnoWolves Fibonacci</h1>
+        <button id="theme-toggle">🌙 Karanlık Mod</button>
+    </header>
+
+    <section>
+        <h2>Haberler</h2>
+        <div id="news-list">
+            <p>Yükleniyor...</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 TechnoWolves Fibonacci</p>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js"></script>
+
+    <script type="module" src="script.js"></script>
 </body>
 </html>
